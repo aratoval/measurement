@@ -26,4 +26,8 @@ sudo apt-get install python3-smbus
 
 sudo python3 setup.py install
 
+* for security
 
+sudo apt-get install libffi-dev libssl-dev -y
+
+sudo pip3 install bcrypt
