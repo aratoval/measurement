@@ -31,3 +31,9 @@ sudo python3 setup.py install
 sudo apt-get install libffi-dev libssl-dev -y
 
 sudo pip3 install bcrypt
+
+# Run
+
+If you want start (after config) put in console (you are must been in script root folder):
+
+python3 run.py your_passwd_to_database

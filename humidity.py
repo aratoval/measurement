@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-import sys
+#import sys
 import Adafruit_DHT
 
 sensor = Adafruit_DHT.DHT11
 
-pin = 22
+pin = 17
 
-humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
-if humidity is not None and temperature is not None:
-    print("Temp={0:0.1f}*C Humidity={1:0.1f}%".format(temperature, humidity))
-else:
-    print("dupa z pomiaru")
+def read_humidity_sensor():
+    humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+    if humidity is not None and temperature is not None:
+        return int(temperature * 10), int(humidity * 10)
+    else:
+        return "dupa z pomiaru"

@@ -15,6 +15,8 @@ def logining(passwd = str(sys.argv[1])):                # function to log in db 
 
 def write_to_db(data):                                  # function to write data in to db
     db, cur = logining()
+    cur.execute(data)
+    db.commit()
     db.close()
 
 def read_from_db(query):                                # function to read data from db
