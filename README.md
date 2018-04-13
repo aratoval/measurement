@@ -2,11 +2,9 @@
 
 Measurement using Raspberry pi
 
-# Requirements
+# Prerequisites
 
-You mast install:
-
-* Adafruit DHT11 library
+* Adafruit DHT11 library::
 
 git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 
@@ -16,7 +14,7 @@ sudo apt-get install build-essential python3-dev
 
 sudo python3 setup.py install
 
-* Adafruit_Python_BMP library
+* Adafruit_Python_BMP library::
 
 git clone https://github.com/adafruit/Adafruit_Python_BMP.git
 
@@ -26,14 +24,14 @@ sudo apt-get install python3-smbus
 
 sudo python3 setup.py install
 
-* for security
+* for security::
 
 sudo apt-get install libffi-dev libssl-dev -y
 
 sudo pip3 install bcrypt
 
-# Run
+# Start script
 
-If you want start (after config) put in console (you are must been in script root folder):
+After configuration to start the script execute::
 
-python3 run.py your_passwd_to_database
+python3 start.py your_passwd_to_database
