@@ -8,16 +8,17 @@ import my_mysql as msql
 import time
 
 
-delta = 10.0
+delta = 20.0
 
 temp_probe_id = ["28-0000045d724a", "28-0000045d7be4"]
 sensor_id_name = {temp_probe_id[0]:"na zewnątrz", temp_probe_id[1]:"w domu"}
 
 
-while 1:
+#while 1:
+for step in range(int(60.0 / delta)):
     start_time = time.time()
     time_to_db = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(start_time))
-    print(time_to_db)
+#    print(time_to_db)
     for i in temp_probe_id:
         temp = t.read_temp(i)
         query = """INSERT INTO temperature (Date_and_Time, Sensor_Id, VALUE) VALUES ('{}', '{}', {});""".format(time_to_db, i, temp)
